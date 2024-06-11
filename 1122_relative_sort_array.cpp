@@ -7,7 +7,6 @@ public:
     vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
 
         // Step 1: Count the occurrences of each element in arr1
-        int h[1001] = {0};
         // This creates a map with entries like:
         // 0:0
         // 1:0
@@ -15,20 +14,16 @@ public:
         // 3:0
         // ..... 1001:0
 
-        // Constraints
+        // Constraints      // Very Important
         // 1 <= arr1.length, arr2.length <= 1000
+        
+        int h[1001] = {0};
 
         int a = arr1.size(), b = arr2.size();
         for(int i = 0; i < a; i++){
             h[arr1[i]]++;
             cout<<"h["<<arr1[i]<<"] = "<<h[arr1[i]]<<endl;
         }
-        
-        // cout<<"State of Mp"<<endl;
-        // // print the state of mp
-        // for(int i = 0; i < 1001; i++){
-        //     cout<<"h["<<i<<"] = "<<h[i]<<endl;
-        // }
 
         // Step 2: Place elements of arr2 into arr1 according to their order in arr2
         int j = 0;
