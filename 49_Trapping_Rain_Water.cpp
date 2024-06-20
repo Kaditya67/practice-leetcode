@@ -2,6 +2,7 @@ class Solution {
 public:
     int trap(vector<int>& height) {
         
+        ios_base::sync_with_stdio(false);
         int n = height.size();
         if (n == 0) return 0;
         vector<int> left(n, 0), right(n, 0);
