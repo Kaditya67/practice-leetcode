@@ -36,7 +36,8 @@ public:
                 }
             }
 
-            count += (leftSmaller * rightGreater) + (leftGreater * rightSmaller);
+            count += leftSmaller * rightGreater;
+            count += leftGreater * rightSmaller;
             cout<<"count is: "<<count<<endl;
             cout<<endl;
         }
@@ -51,9 +52,10 @@ int main() {
     vector<int> rating2 = {2, 1, 3};
     vector<int> rating3 = {1, 2, 3, 4};
 
+    cout<< "2,5,3,4,1"<<endl;
     cout << "Number of teams for rating1: " << solution.numTeams(rating1) << endl; // Output: 3
-    cout << "Number of teams for rating2: " << solution.numTeams(rating2) << endl; // Output: 0
-    cout << "Number of teams for rating3: " << solution.numTeams(rating3) << endl; // Output: 4
+    // cout << "Number of teams for rating2: " << solution.numTeams(rating2) << endl; // Output: 0
+    // cout << "Number of teams for rating3: " << solution.numTeams(rating3) << endl; // Output: 4
 
     return 0;
 }
