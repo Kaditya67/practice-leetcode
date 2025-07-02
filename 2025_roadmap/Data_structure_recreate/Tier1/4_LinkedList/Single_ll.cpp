@@ -13,6 +13,10 @@ public:
     }
 };
 
+
+// Node* head;  --> This is just a pointer, not a Node itself
+// new Node(val);   --> This creates a "new Node object" in the heap memory and returns a pointer to it
+
 class SingleLinkedList{
 private:
     Node* head;
@@ -21,10 +25,18 @@ public:
         head = nullptr;
     }
 
+    // Before
+    // head → [10] → [20]
+
+    // After
+    // [5] → [10] → [20]
+    // ↑
+    // head
+
     void insertAtHead(int val){
         Node* newNode = new Node(val);
-        newNode->next = head;
-        head = newNode;
+        newNode->next = head;   // Point to the Node where head is pointing
+        head = newNode; // Now head points to the new Node
     }
 
     void insertAtEnd(int val){
