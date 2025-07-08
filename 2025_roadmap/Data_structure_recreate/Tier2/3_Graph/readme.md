@@ -93,8 +93,3 @@ A complete reference of graph algorithms, when to use them, and key comparisons.
 | Detect cycles                    | **DFS/RecStack (Directed)** / **DSU (Undirected)** |
 
 ---
-
-> 📘 Save this Markdown as `graph-cheatsheet.md`  
-> Or ask for a **PDF export** / **graph visual summary**!
-
----
