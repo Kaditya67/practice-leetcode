@@ -2,11 +2,12 @@
 using namespace std;
 
 class Graph{
-public:
+private:
     // Adjacency List/ Matrix
     vector<vector<int>>adjList;
     int V;
 
+public:
     Graph(int vertices){
         V = vertices;
         adjList.resize(V);
@@ -30,30 +31,6 @@ public:
     }
 };
 
-
-void bfs(Graph& graph, int start, int V) {
-    vector<bool> visited(V, false);
-    queue<int> q;
-    q.push(start);
-    visited[start]=true;
-
-    cout << "BFS starting from node " << start << ": ";
-    while(!q.empty()){
-        int node =  q.front();
-        q.pop();
-        cout << node << " ";
-
-        for(int neighbor: graph.adjList[node]){
-            if(!visited[neighbor]){
-                visited[neighbor] = true;
-                q.push(neighbor);
-            }
-        }
-    }
-    cout<<endl;
-}
-
-
 int main() {
     int V = 6;
     Graph g(V);
@@ -68,6 +45,6 @@ int main() {
     g.addEdge(3, 5);
 
     g.printGraph();
-    bfs(g,0,V);
+
     return 0;
 }
