@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 void printArray(vector<int> &arr){
     for(int num:arr){
         cout<<num<<" ";
@@ -26,7 +25,7 @@ void Heapify(vector<int>&arr,int n,int i){
 void heapSort(vector<int> &arr){
     // 1. Build Max Heap
     int n = arr.size();
-    for(int i=n/2;i>=0;i--){
+    for(int i=n/2-1;i>=0;i--){
         Heapify(arr,n,i);
     }
 
