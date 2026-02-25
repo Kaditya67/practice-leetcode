@@ -1,20 +1,40 @@
-# Detailed Study Guide: 01_Foundations_and_STL
+# STUDY GUIDE: 01 Foundations and STL
 
-## Atomic Sub-topics to Master
-- Complexity Analysis
-- Vector resizing logic
-- Map/Set internals (Red-Black Trees vs Hashing)
-- STL Iterators
-- PQ Custom Comparators.
+## Purpose
+Master this folder at interview quality while preserving contest-ready speed.
 
-## Core Mental Model
-- Why do we use this? When does it beat (N)$ or (N^2)True
-- Draw the recursive tree or state transition if applicable.
+## Prerequisites
+None. This is the base folder.
 
-## Avoid Getting Mixed Up
-- **Distinction**: How is this different from Foundations?
-- **Pro-Tip**: Identify the specific "Trigger words" in a problem statement that point to this topic.
+## Atomic Topics to Learn
+- Constraint to complexity mapping
+- STL containers: vector, map, unordered_map, set
+- Iterator safety and traversal patterns
+- Custom comparators for priority_queue
+- Pass-by-reference and memory discipline
 
-## Prerequisite Map
-- What should you know BEFORE touching this? 
+## Trigger Patterns (When to Use This Folder)
+- N up to 1e5 or 1e6
+- Need fast lookup or ordered traversal
+- Need top-k with dynamic inserts
 
+## Common Failure Modes
+- Using unordered_map when ordering is required
+- Copying large vectors by value
+- Ignoring iterator invalidation after erase/realloc
+
+## Session Protocol (90 Minutes)
+- 15 minutes: review one spaced-repetition problem.
+- 50 minutes: solve one new Medium (or 2 Easy if blocked after 35 minutes).
+- 20 minutes: speed rerun of a previously solved problem without notes.
+- 5 minutes: update TRACKER, MASTER_PLAN, and SPACED_REPETITION_LOG.
+
+## Completion Gate
+- [ ] Solve 8 to 10 STL and complexity problems
+- [ ] Explain time and space bounds for each accepted solution
+- [ ] Maintain >=70% first-try acceptance on recent set
+
+## Evidence to Record
+- Problem ID and final complexity.
+- At least one edge case that caused or could cause WA.
+- If solve time exceeds 45 minutes or hints were used, log in spaced repetition.

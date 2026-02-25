@@ -1,22 +1,26 @@
-# SYNC_PROGRESS: How to Update Your Journey
+# SYNC_PROGRESS: Manual End-of-Session Checklist
 
-Your 2026 journey is interactive. You do not need to manually edit the Markdown files to track progress.
+This journey uses manual Markdown tracking for reliability and clarity.
 
-## Updating with Antigravity
-You can give me commands like:
-- "I finished all the array sliding window problems."
-- "Mark STL foundations as complete."
-- "I'm feeling confident in Binary Search, update my tracker."
+## End-of-Session Checklist (5 Minutes)
+1. Update `TRACKER.md` with one row in this format:
+   `Date | Topic | Problems | Attempts | Accepted | Accuracy % | Avg Solve Time | Confidence | Next Step`
+2. If any problem took more than 45 minutes or needed hints, add it to `SPACED_REPETITION_LOG.md`.
+3. Check off completed atomic items in `MASTER_PLAN.md`.
+4. Write a one-line reflection in your daily log file:
+   `2026/Daily_Planner/YYYY-MM-DD.md`.
+5. Pick tomorrow's first problem before ending the session.
 
-## Progress Update Actions
-1. Tick the Box: I'll visit MASTER_PLAN.md and check the relevant topic.
-2. Update Tracker: I'll add a new entry to TRACKER.md with the current date.
-3. Recommend Next: I'll search for the next 3 high-quality problems in your roadmap and suggest them to you.
+## Exact Prompts You Can Use with Me
+- `Update tracker: date 2026-02-25, topic Folder 03 Sliding Window, problems LC3,LC424, attempts 3, accepted 2, avg 31m, confidence 7, next step threshold binary search.`
+- `Add this to spaced repetition: LC 76 Minimum Window Substring, topic Strings, failure reason pointer reset bug, trigger pattern variable-size window, date 2026-02-25.`
+- `Mark complete in master plan: Folder 01 vectors, iterators, maps and custom priority queue.`
+- `Recommend next 3 problems for Folder 03 interview + contest speed mix.`
 
-## Standard File Format
-To ensure organization, save your code files as:
-2026/XX_Topic/Code/AtomicTopic_ProblemID_Title.cpp
-Example: 2026/03_Arrays_and_Searching/Code/BinarySearch_LC1011_ShipCapacity.cpp
+## Naming Contract
+Store code only inside numbered folders:
+`2026/XX_Topic/Code/AtomicTopic_ProblemID_Title.cpp`
 
-Best of luck with your 2026 goals.
+Example:
+`2026/03_Arrays_and_Searching/Code/BinarySearch_LC1011_ShipCapacity.cpp`
 

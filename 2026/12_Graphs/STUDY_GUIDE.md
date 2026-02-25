@@ -1,22 +1,40 @@
-# Detailed Study Guide: 12_Graphs
+# STUDY GUIDE: 12 Graphs
 
-## Atomic Sub-topics to Master
-- BFS/DFS
-- Dijkstra ((E \log V)$)
-- Bellman-Ford
-- Floyd-Warshall
-- Prim/Kruskal
-- DSU (Path compression)
-- SCC (Tarjan).
+## Purpose
+Master this folder at interview quality while preserving contest-ready speed.
 
-## Core Mental Model
-- Why do we use this? When does it beat (N)$ or (N^2)True
-- Draw the recursive tree or state transition if applicable.
+## Prerequisites
+08 stacks/queues and 09 trees
 
-## Avoid Getting Mixed Up
-- **Distinction**: How is this different from Graphs?
-- **Pro-Tip**: Identify the specific "Trigger words" in a problem statement that point to this topic.
+## Atomic Topics to Learn
+- BFS and DFS traversal models
+- Topological sort on DAGs
+- Shortest path basics: Dijkstra and Bellman-Ford
+- MST basics: Kruskal and Prim
+- DSU for connectivity
 
-## Prerequisite Map
-- What should you know BEFORE touching this? 
+## Trigger Patterns (When to Use This Folder)
+- Nodes with edges relationship
+- Connectivity or shortest path asked
+- Course schedule or dependency order
 
+## Common Failure Modes
+- Not resetting visited structures
+- Using BFS for weighted shortest path
+- Incorrect DSU union or path compression usage
+
+## Session Protocol (90 Minutes)
+- 15 minutes: review one spaced-repetition problem.
+- 50 minutes: solve one new Medium (or 2 Easy if blocked after 35 minutes).
+- 20 minutes: speed rerun of a previously solved problem without notes.
+- 5 minutes: update TRACKER, MASTER_PLAN, and SPACED_REPETITION_LOG.
+
+## Completion Gate
+- [ ] Solve 12 graph problems
+- [ ] Correctly choose BFS vs Dijkstra vs DSU in notes
+- [ ] Maintain >=70% first-try acceptance on recent set
+
+## Evidence to Record
+- Problem ID and final complexity.
+- At least one edge case that caused or could cause WA.
+- If solve time exceeds 45 minutes or hints were used, log in spaced repetition.

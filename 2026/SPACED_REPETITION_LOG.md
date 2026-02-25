@@ -1,31 +1,35 @@
-# SPACED REPETITION LOG: The Science of Retention
+# SPACED REPETITION LOG: Retention Engine
 
-If you struggle with a problem (took > 45 mins, needed hints, or failed multiple times), it goes into this log.
+Add a problem here if:
+- Solve time was more than 45 minutes.
+- Hints/editorial were needed.
+- You failed multiple submissions due to logic bugs.
 
-Active Recall and Spaced Repetition are the ONLY proven ways to move an algorithm from short-term memory to permanent mastery.
+## Review Schedule
+- Review 1 (R1): next day.
+- Review 2 (R2): +3 days.
+- Review 3 (R3): +1 week.
+- Review 4 (R4): +1 month.
 
-## How to use this log
-When you add a problem, calculate the future review dates. On those dates, attempt to solve the problem "Active Recall" style—from scratch, without looking at your previous notes or code.
-
-### The Algorithm
-- **Review 1 (R1)**: Next Day
-- **Review 2 (R2)**: +3 Days
-- **Review 3 (R3)**: +1 Week
-- **Review 4 (R4)**: +1 Month
-
----
-
-## 📅 The Log
-
-| Date Added | Topic | Problem Name / ID | R1 (Date/Check) | R2 (Date/Check) | R3 (Date/Check) | R4 (Date/Check) | Perfected? |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Example | DP | LC 322: Coin Change | [ ] | [ ] | [ ] | [ ] | [ ] |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
+## Rules
+1. Attempt each review without notes first.
+2. Mark `Recovered <=20m?` only when full solution is reproduced in 20 minutes or less.
+3. Keep failure reason and trigger pattern mandatory for every row.
 
 ---
 
-## 📈 Active Recall Audit
-Once a month, randomly pick 3 problems from the "Perfected" list. Can you still write the optimal logic without hesitating? If not, it goes back into the log.
+## The Log
+
+| Date Added | Topic | Problem ID/Name | Failure Reason (Mandatory) | Trigger Pattern (Mandatory) | R1 Date/Check | R2 Date/Check | R3 Date/Check | R4 Date/Check | Recovered <=20m? | Perfected? |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Example | DP | LC 322 Coin Change | Wrong transition order in tabulation | Unbounded knapsack transition | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| | | | | | | | | | | |
+| | | | | | | | | | | |
+| | | | | | | | | | | |
+| | | | | | | | | | | |
+
+---
+
+## Monthly Audit
+Pick 3 problems marked `Perfected` and re-solve each from scratch.
+If you fail to reconstruct quickly, reinsert with a fresh date and new failure reason.

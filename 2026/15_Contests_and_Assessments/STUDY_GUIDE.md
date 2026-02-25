@@ -1,19 +1,40 @@
-# Detailed Study Guide: 15_Contests_and_Assessments
+# STUDY GUIDE: 15 Contests and Assessments
 
-## Atomic Sub-topics to Master
-- Contest strategies
-- Virtual contests
-- CodeChef/LeetCode rating tracking
-- Retrospectives.
+## Purpose
+Master this folder at interview quality while preserving contest-ready speed.
 
-## Core Mental Model
-- Why do we use this? When does it beat (N)$ or (N^2)True
-- Draw the recursive tree or state transition if applicable.
+## Prerequisites
+All prior folders preferred
 
-## Avoid Getting Mixed Up
-- **Distinction**: How is this different from Contests?
-- **Pro-Tip**: Identify the specific "Trigger words" in a problem statement that point to this topic.
+## Atomic Topics to Learn
+- Timed problem selection strategy
+- Submission risk management
+- Post-contest upsolving workflow
+- Error taxonomy and remediation loop
+- Weekly lock and next-focus selection
 
-## Prerequisite Map
-- What should you know BEFORE touching this? 
+## Trigger Patterns (When to Use This Folder)
+- Weekly contest day
+- Need to measure speed under pressure
+- Need skill-gap diagnosis
 
+## Common Failure Modes
+- Overcommitting to one hard problem early
+- Submitting without edge-case pass
+- Skipping post-contest analysis
+
+## Session Protocol (90 Minutes)
+- 15 minutes: review one spaced-repetition problem.
+- 50 minutes: solve one new Medium (or 2 Easy if blocked after 35 minutes).
+- 20 minutes: speed rerun of a previously solved problem without notes.
+- 5 minutes: update TRACKER, MASTER_PLAN, and SPACED_REPETITION_LOG.
+
+## Completion Gate
+- [ ] Complete one timed simulation per week
+- [ ] Show non-decreasing accuracy or remediation note
+- [ ] Update weak-topic plan in tracker each Sunday
+
+## Evidence to Record
+- Problem ID and final complexity.
+- At least one edge case that caused or could cause WA.
+- If solve time exceeds 45 minutes or hints were used, log in spaced repetition.

@@ -1,18 +1,40 @@
-# Detailed Study Guide: 08_Stacks_and_Queues
+# STUDY GUIDE: 08 Stacks and Queues
 
-## Atomic Sub-topics to Master
-- Monotonic Stack (Next Greater Element)
-- Sliding Window Maximum (Deque)
-- Circular Queue implementation.
+## Purpose
+Master this folder at interview quality while preserving contest-ready speed.
 
-## Core Mental Model
-- Why do we use this? When does it beat (N)$ or (N^2)True
-- Draw the recursive tree or state transition if applicable.
+## Prerequisites
+03 Arrays and Searching and 06 recursion basics
 
-## Avoid Getting Mixed Up
-- **Distinction**: How is this different from Stacks?
-- **Pro-Tip**: Identify the specific "Trigger words" in a problem statement that point to this topic.
+## Atomic Topics to Learn
+- Monotonic stack patterns
+- Queue and deque optimization patterns
+- Parenthesis and expression validation
+- Next greater/smaller families
+- Stack simulation of recursive flow
 
-## Prerequisite Map
-- What should you know BEFORE touching this? 
+## Trigger Patterns (When to Use This Folder)
+- Nearest greater or smaller queries
+- Need O(N) with ordered removals
+- Parsing bracket or expression constraints
 
+## Common Failure Modes
+- Wrong monotonic condition direction
+- Forgetting stale index removal in deque
+- Mixing stack and queue semantics
+
+## Session Protocol (90 Minutes)
+- 15 minutes: review one spaced-repetition problem.
+- 50 minutes: solve one new Medium (or 2 Easy if blocked after 35 minutes).
+- 20 minutes: speed rerun of a previously solved problem without notes.
+- 5 minutes: update TRACKER, MASTER_PLAN, and SPACED_REPETITION_LOG.
+
+## Completion Gate
+- [ ] Solve 8 stack or queue problems
+- [ ] Solve at least 2 monotonic problems without hints
+- [ ] Maintain >=70% first-try acceptance on recent set
+
+## Evidence to Record
+- Problem ID and final complexity.
+- At least one edge case that caused or could cause WA.
+- If solve time exceeds 45 minutes or hints were used, log in spaced repetition.
