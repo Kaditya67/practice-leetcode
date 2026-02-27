@@ -18,10 +18,6 @@ None. This is the base folder.
 - Need fast lookup or ordered traversal
 - Need top-k with dynamic inserts
 
-## Common Failure Modes
-- Using unordered_map when ordering is required
-- Copying large vectors by value
-- Ignoring iterator invalidation after erase/realloc
 
 ## Session Protocol (90 Minutes)
 - 15 minutes: review one spaced-repetition problem.
