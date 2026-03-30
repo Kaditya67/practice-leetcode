@@ -88,10 +88,10 @@ interview quality plus contest speed.
 ---
 
 ## First 4-Week Restart Sequence
-1. Week 1 (2026-02-25 to 2026-03-03): finish Folder 01 and start Folder 03 basics.
-2. Week 2 (2026-03-04 to 2026-03-10): Folder 03 core patterns and threshold binary search.
-3. Week 3 (2026-03-11 to 2026-03-17): Folder 04 plus Folder 05 essentials for speed.
-4. Week 4 (2026-03-18 to 2026-03-24): Folder 06 recursion/backtracking and Folder 07 linked-list essentials.
+1. Week 1 (2026-02-25 to 2026-03-03): finish Folder 01 and begin Folder 02 Mathematics.
+2. Week 2 (2026-03-04 to 2026-03-10): finish Folder 02 core math revision and start Folder 03 basics.
+3. Week 3 (2026-03-11 to 2026-03-17): Folder 03 core patterns and threshold binary search.
+4. Week 4 (2026-03-18 to 2026-03-24): Folder 04 plus Folder 05 essentials for speed.
 
 ---
 

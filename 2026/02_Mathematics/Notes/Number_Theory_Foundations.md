@@ -8,6 +8,20 @@
 
 ## 2. Greatest Common Divisor (GCD) and LCM
 
+### What GCD and LCM Mean
+- **GCD(a, b)** = Greatest Common Divisor
+  - The largest number that divides both `a` and `b`
+  - Example: `GCD(12, 18) = 6`
+- **LCM(a, b)** = Least Common Multiple
+  - The smallest positive number that is a multiple of both `a` and `b`
+  - Example: `LCM(12, 18) = 36`
+
+### Why They Matter
+- **GCD** tells you the strongest common divisibility shared by two numbers.
+  - Useful in fraction simplification, equal grouping, divisibility checks, and reducing ratios.
+- **LCM** tells you the first common meeting point of two repeating quantities.
+  - Useful in cycle problems, synchronization, repeating events, and common denominators.
+
 ### Euclidean Algorithm
 The most efficient way to find GCD.
 - **Logic**: $GCD(a, b) = GCD(b, a \pmod{b})$ until $b = 0$.
@@ -28,6 +42,32 @@ long long l = std::lcm(a, b); // Beware: std::lcm can overflow easily if inputs 
 ### Least Common Multiple (LCM)
 - **Identity**: $a \times b = GCD(a, b) \times LCM(a, b)$.
 - **Implementation**: To prevent overflow, always divide first: $LCM(a, b) = (a / GCD(a, b)) \times b$.
+
+### Why Does $a \times b = GCD(a, b) \times LCM(a, b)$?
+This identity works because of prime factorization.
+
+Example:
+- `12 = 2^2 * 3`
+- `18 = 2 * 3^2`
+
+Then:
+- `GCD(12, 18) = 2^1 * 3^1 = 6`
+- `LCM(12, 18) = 2^2 * 3^2 = 36`
+
+Now:
+- `12 * 18 = 216`
+- `6 * 36 = 216`
+
+The reason is:
+- **GCD** takes the smaller exponent of each prime.
+- **LCM** takes the larger exponent of each prime.
+
+Together, those two multiplications reconstruct the full contribution of both numbers exactly once.
+
+Easy intuition:
+- `GCD` = common shared part
+- `LCM` = full combined part
+- multiplying them balances back to `a * b`
 
 ### Extended Euclidean Algorithm
 Used to find coefficients $x$ and $y$ such that $ax + by = \text{gcd}(a, b)$. Useful for Finding Modular Multiplicative Inverse.
@@ -95,6 +135,9 @@ while (num != 1) {
 ### Segmented Sieve
 Used when you need primes in a range $[L, R]$ where $R$ is large (up to $10^{12}$) but $R-L$ is small (up to $10^6$).
 - **Logic**: Use a regular sieve up to $\sqrt{R}$, then use those primes to mark multiples in the range $[L, R]$.
+- **Important Edge Cases**:
+  - If `L <= 1`, then `0` and `1` must be marked non-prime when they fall inside the range.
+  - A robust starting multiple is `max(p * p, ((L + p - 1) / p) * p)`.
 
 ```cpp
 vector<long long> segmentedSieve(long long L, long long R) {
@@ -115,17 +158,17 @@ vector<long long> segmentedSieve(long long L, long long R) {
     // 2. Sieve the range [L, R]
     vector<bool> isPrime(R - L + 1, true);
     for (long long p : primes) {
-        // Find minimum number in [L, R] that is a multiple of p
-        long long base = (L / p) * p;
-        if (base < L) base += p;
-        if (base == p) base += p; // Handle the case where the base is p itself
+        // Find first multiple of p inside [L, R], but never start below p*p
+        long long base = max(p * p, ((L + p - 1) / p) * p);
         
         for (long long i = base; i <= R; i += p) {
             isPrime[i - L] = false; // Mark multiple as not prime
         }
     }
     
-    if (L == 1) isPrime[0] = false; // Corner case: 1 is not prime
+    for (long long x = L; x <= min(R, 1LL); x++) {
+        isPrime[x - L] = false;
+    }
     
     // 3. Extract the primes
     vector<long long> res;

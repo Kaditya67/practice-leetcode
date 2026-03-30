@@ -14,10 +14,10 @@ Essential for avoiding overflow.
 4. **Division**: $(a / b) \pmod{M} = (a \times b^{-1}) \pmod{M}$ (Requires Modular Multiplicative Inverse).
 
 ### Modular Multiplicative Inverse
-By Fermat's Little Theorem, if $M$ is prime, then $b^{M-1} \equiv 1 \pmod{M}$, which means $b^{-1} \equiv b^{M-2} \pmod{M}$.
+By Fermat's Little Theorem, if $M$ is prime and $b \not\equiv 0 \pmod{M}$, then $b^{M-1} \equiv 1 \pmod{M}$, which means $b^{-1} \equiv b^{M-2} \pmod{M}$.
 ```cpp
 // Returns b^-1 mod M
-// Requires M to be prime. Uses binpow (defined below)
+// Requires M to be prime and gcd(b, M) = 1. Uses binpow (defined below)
 long long modInverse(long long b, long long M) {
     return binpow(b, M - 2, M);
 }
@@ -77,7 +77,7 @@ long long fastmul(long long a, long long b, long long m) {
 
 ## 5. Decision Matrix (Read This First)
 1. **Handling Subtraction Modulo?** -> Always add $M$ before the final modulo to avoid negative results: `(a - b) % M = (a % M - b % M + M) % M`.
-2. **Calculating $a^b$?** -> Always use Binary Exponentiation (`binpow`) if $b > 3$.
-3. **Calculating $(a / b) \pmod{M}$?** -> Find modular multiplicative inverse of $b$ and multiply it by $a$: `(a * modInverse(b, M)) % M`.
+2. **Calculating integer $a^b$ or $a^b \pmod{M}$ for large $b$?** -> Use Binary Exponentiation (`binpow`).
+3. **Calculating $(a / b) \pmod{M}$?** -> First ensure the inverse exists, then compute `(a * modInverse(b, M)) % M`.
 4. **Problem asks for "Answer modulo $10^9+7$"?** -> Apply modulo at EVERY single step of multiplication and addition.
 5. **Modulus $M \approx 10^{18}$ and multiplying?** -> Use `__int128` casting or `binmul` to prevent $10^{36}$ overflow.

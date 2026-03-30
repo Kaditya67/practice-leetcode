@@ -12,7 +12,7 @@
 - **XOR (`^`)**: Bits must be different. (Used for toggling/uniqueness).
 - **NOT (`~`)**: Flips all bits.
 - **Left Shift (`<<`)**: Multiply by $2^n$. (Be careful with overflow: `1LL << n`).
-- **Right Shift (`>>`)**: Divide by $2^n$.
+- **Right Shift (`>>`)**: For non-negative integers, this behaves like division by $2^n$.
 
 ---
 
@@ -43,10 +43,10 @@
 
 ---
 
-## 5. Built-in Functions (GCC Specific, O(1) time)
+## 5. Built-in Functions (GCC Specific, effectively constant-time in practice)
 - **Count Set Bits (Popcount)**: `__builtin_popcount(x)` for `int` and `__builtin_popcountll(x)` for `long long`.
-- **Count Leading Zeros**: `__builtin_clz(x)` for `int`, `__builtin_clzll(x)` for `long long`. Number of 0s before the most significant 1 bit.
-- **Count Trailing Zeros**: `__builtin_ctz(x)` for `int`, `__builtin_ctzll(x)` for `long long`. Number of 0s after the least significant 1 bit.
+- **Count Leading Zeros**: `__builtin_clz(x)` for `int`, `__builtin_clzll(x)` for `long long`. Number of 0s before the most significant 1 bit. Do not call this on `0`.
+- **Count Trailing Zeros**: `__builtin_ctz(x)` for `int`, `__builtin_ctzll(x)` for `long long`. Number of 0s after the least significant 1 bit. Do not call this on `0`.
 
 ---
 

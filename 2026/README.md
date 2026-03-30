@@ -44,6 +44,7 @@ Update manually in 5 minutes using `SYNC_PROGRESS.md`.
 - **`SPACED_REPETITION_LOG.md`**: Add any problem that took you more than 45 minutes to solve here. We will check it again next week to build permanent memory.
 - **`PROBLEM_SOLVING_PEDAGOGY.md`**: Read this to understand the mental framework of solving a problem from scratch before typing.
 - **`15_Contests_and_Assessments/CONTEST_GUIDE.md`**: Read this 2 hours before participating in any LeetCode/CodeChef contest.
+- **`16_Daily_Problem_Lab/`**: Use this for any random daily problem from any platform when you want to store intuition, learnings, mistakes, and multiple versions.
 
 ---
 
