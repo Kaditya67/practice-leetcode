@@ -3,7 +3,7 @@
 next_permutation generates the next lexicographical permutation of the sequence.
 
 ## Usage:
-- #include <algorithm>
+- #include `<algorithm>`
 - bool next_permutation(begin, end)
 
 Returns true if there is a next permutation, false otherwise.
@@ -27,7 +27,7 @@ int main() {
     // abc
     // acb
     // bac
-    // bca
+    // 
     // cab
     // cba
     return 0;
